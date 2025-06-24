@@ -1,0 +1,205 @@
+/*------------------------------
+    ベーススタイル
+------------------------------*/
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border: none;
+}
+
+h1,
+.title {
+    text-align: center;
+}
+
+.section {
+    padding: 49px 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* 記事本体 */
+.article__container {
+    padding: 40px 20px;
+    background-color: #E7F2F2;
+}
+
+
+.article__body h2,
+.article__body h3,
+.article__body h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.article__body p {
+    margin-bottom: 10px;
+}
+
+/*------------------------------
+    h1　見出しアイコン
+------------------------------*/
+
+.heading-31 {
+    position: relative;
+    padding: .3em 0 .2em 1em;
+    border-bottom: 3px solid #2589d0;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.heading-31::before {
+    position: absolute;
+    top: 0;
+    left: .3em;
+    transform: rotate(55deg);
+    height: 11px;
+    width: 12px;
+    background: #2589d0;
+    content: '';
+}
+
+.heading-31::after {
+    position: absolute;
+    transform: rotate(15deg);
+    top: .6em;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    background: #2589d0;
+    content: '';
+}
+
+/*------------------------------
+    h2　見出しアイコン
+------------------------------*/
+.heading-38 {
+    position: relative;
+    padding: .5em 1.2em;
+    color: #333333;
+}
+
+.heading-38::before,
+.heading-38::after {
+    display: inline-block;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #2589d0;
+    content: '';
+}
+
+.heading-38::before {
+    top: calc(50% - 3px);
+    left: 0;
+}
+
+.heading-38::after {
+    top: calc(50% + 3px);
+    left: 5px;
+}
+
+/*------------------------------
+    h3　見出しアイコン
+------------------------------*/
+.heading-27 {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: #333333;
+}
+
+.heading-27::before {
+    width: 0.8em;
+    height: 0.4em;
+    border-bottom: 4px solid #2589d0;
+    border-left: 4px solid #2589d0;
+    transform: rotate(-45deg) translate(2px, -2px);
+    content: '';
+}
+
+/*------------------------------
+    画像
+------------------------------*/
+/* 画像 */
+.article__body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/*使用アプリアイコン*/
+.figma__icon img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin-left: 0;
+}
+
+/*------------------------------
+    index.page#worksに飛ぶ
+------------------------------*/
+
+.home_link {
+    text-align: center;
+}
+
+.home_link a {
+    transition: opacity .3s;
+    text-decoration: none;
+    color: #1ca9e3;
+}
+
+/*------------------------------
+    アプリアイコン横並び
+------------------------------*/
+.figma__icon {
+    display: flex;
+    justify-content: flex-start;
+    /* ← 左揃えに変更 */
+    align-items: center;
+}
+
+.figma__icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*------------------------------
+    works_bn11の写真のレイアウト
+------------------------------*/
+.banner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.banner-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    /* デザイン確認用。不要なら削除OK */
+}
+
+@media (max-width: 600px) {
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+}
